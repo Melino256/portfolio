@@ -55,7 +55,12 @@
     </header>
 
     <main class="main-content">
-        <section id="home" class="sectio  itle">
+        <section id="home" class="section-title">
+            <div class="hero-image-container">
+                <div class="profile-image-wrapper" aria-hidden>
+                    <img src="profilePic.jpg" alt="Profile" class="profile-image">
+                </div>
+            </div>
                     Hi — I'm <span class="text-primary">MELVIN OKETCHO</span>
                 </h1>
 
@@ -80,11 +85,7 @@
                 </div>
             </div>
 
-            <div class="hero-image-container">
-                <div class="profile-image-wrapper" aria-hidden>
-                    <img src="image.png" alt="Profile" class="profile-image">
-                </div>
-            </div>
+       
         </section>
 
         <section id="about" class="section about-section">
@@ -176,28 +177,30 @@
         <section id="education" class="section education-section">
             <div class="section-container-small">
                 <h2 class="section-title text-primary text-center">Education</h2>
+                <div class="education-cards">
                     <div class="education-card">
                         <div class="eduaction-content">
-                            <h3>2024-Present</h1>
+                            <h1 style="color: orangered;">2024-Present</h1>
                             <p class="education-institution">ISBAT University</p>
                             <p class="education-degree">Diploma in Software Engineering</p>
                         </div>
                     </div>
-
+                    
                     <div class="education-card">
                         <div class="eduaction-content">
-                            <h3>2022-2023</h1>
-                            <p class="education-institution">st Marys colleage lugazi</p>
+                            <h1 style="color: orangered;">2022-2023</h1>
+                            <p class="education-institution">St Marys' Colleage Lugazi</p>
                             <p class="education-degree">Uganda Advanced Certificate of Education (UACE)</p>                  
                     </div>
                 </div>
 
                 <div class="education-card" >
                         <div class="eduaction-content">
-                            <h3>2017-2020</h1>
+                            <h1 style="color: orangered;">2017-2020</h1>
                             <p class="education-institution">St. Marys' College Lugazi</p>
                             <p class="education-degree">Uganda Certificate of Education (UCE)</p>                  
                     </div>
+                </div>
                 </div>
 
             </div> 
@@ -207,23 +210,16 @@
             <div class="section-container-contact">
                 <h2 class="section-title text-primary text-center">Contact</h2>
                 <p class="section-subtitle">Want to work together? Send me a message or email me directly.</p>
-
-                <form id="contactForm" class="contact-form card" action="#" novalidate>
-                    <label class="sr-only" for="name">Full name</label>
-                    <input id="name" name="name" type="text" placeholder="Full name" required class="form-input">
-
-                    <label class="sr-only" for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Email address" required class="form-input">
-
-                    <label class="sr-only" for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Message" required class="form-input"></textarea>
-
-                    <div class="contact-form-actions">
-                        <button type="submit" class="btn btn-primary">Send message</button>
-                        <button type="button" id="mailtoBtn" class="mailto-btn">Reach Me On Email</button>
-                        <span id="formStatus" class="form-status hidden">Message sent — thank you!</span>
-                    </div>
-                </form>
+            
+                <form action="https://formspree.io/f/mldqnkle"
+                method="POST">
+                <label>Your email:</label>
+                <input type="email" name="email">
+                <label>Your message:</label>
+                <textarea name="message"></textarea>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+              </form>
             </div>
         </section>
 

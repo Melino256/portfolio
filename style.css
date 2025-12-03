@@ -102,13 +102,11 @@ body {
     padding-bottom: 4rem; 
 }
 
-.main-content {
-    padding-top: 5rem; 
-}
 
 .section-title {
     font-size: 1.5rem; 
     font-weight: 700;
+    margin-left: 3rem;
 }
 
 .section-subtitle {
@@ -128,6 +126,17 @@ body {
     border-radius: 0.5rem; 
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.education-cards{
+    background-color: var(--color-card);
+    border-radius: 1rem;
+    padding: .5rem 1.325rem;
+    cursor: pointer;
+    transition: .8s ease-in;
+}
+.education-cards:hover{
+    border: orangered 2px solid;
+    transform: translateY(-5px);
 }
 
 
@@ -228,9 +237,6 @@ body {
     color: white;
     border: 2px solid var(--color-primary);
 }
-
-/* Project Buttons (Removed as the Projects section was requested to be removed) */
-/* .btn-project-primary, .btn-project-secondary were here */
 
 
 /* NAVBAR */
@@ -419,15 +425,17 @@ body {
 }
 
 .hero-image-container {
+    position: relative;
+    top: 18rem;
+    left: 50%;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    
 }
 
 .profile-image-wrapper {
     position: relative;
-    width: 12rem; 
-    height: 12rem; 
+    width: 20rem; 
+    height: 20rem; 
     border-radius: 50%; /* Full circle */
     overflow: hidden;
     box-shadow: 0 0 0 3px var(--color-card), 0 20px 25px -5px rgba(0, 0, 0, 0.3); /* Ring and shadow */
@@ -578,15 +586,15 @@ body {
 
 
 /* CONTACT Section */
-.contact-form {
+form {
     margin-top: 1.5rem; 
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem; 
 }
 
-.form-input,
-.contact-form textarea {
+input,
+textarea {
     padding: 0.75rem 1rem; 
     background-color: #1f2937; /* Used a fixed dark gray for consistency on form elements */
     border-radius: 0.5rem; 
@@ -595,14 +603,14 @@ body {
     color: var(--color-text-base);
 }
 
-.form-input:focus,
-.contact-form textarea:focus {
+input:focus,
+form textarea:focus {
     border-color: var(--color-primary); 
     box-shadow: 0 0 0 2px rgba(255, 87, 51, 0.5); /* Primary color shadow with reduced opacity */
     outline: none; 
 }
 
-.contact-form textarea {
+textarea {
     resize: vertical;
 }
 
@@ -617,26 +625,20 @@ body {
     white-space: nowrap;
     border-width: 0;
 }
-
-.contact-form-actions {
-    display: flex;
-    gap: 0.75rem; 
-    align-items: center;
-}
-
-.mailto-btn {
-    font-size: 0.975rem; 
-    color: #ffffff;
-    text-decoration: none;
-    background: none;
-    border: none;
+ button{
+    background-color: orangered;
+    color: white;
+    font-size: 1.3rem;
+    width: 200px;
+    border-radius: 1rem;
+    padding: 10px;
+    transition: .7s ease-in;
     cursor: pointer;
-    padding: 0;
-    transition: color 0.2s ease;
-}
+ }
 
-.mailto-btn:hover {
-    color: var(--color-primary);
+button:hover{
+    background-color: transparent;
+    border: 2px solid orangered;
 }
 
 .form-status {
